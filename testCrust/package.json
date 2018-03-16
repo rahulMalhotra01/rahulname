@@ -1,0 +1,32 @@
+{
+  "name": "eardrums",
+  "version": "1.0.0",
+  "description": "Good information drives great decisions, but it's hard to find everything you need in one place. We developed a solution where customer phone calls are analysed through Natural Language Processing.  We processed the calls to extract out the following useful information:   1. The taxonomy model for the domain. 2. Converted audio files to textual transcripts. 3. Detected and categorised them on the basics of nature of call and the emotion of the caller. 4. Made a dashboard to show all the data along with graphs between various important parameters.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express-session": "^1.15.2",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.7",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "serve-favicon": "^2.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravb12/eardrumsNITD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauravb12/eardrumsNITD/issues"
+  },
+  "homepage": "https://github.com/gauravb12/eardrumsNITD#readme"
+}

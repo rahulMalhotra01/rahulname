@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fidelity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/design.css">
+  <link rel="stylesheet" href="stylesheets/anime.css">
+  <style>
+
+  .bar{
+    fill: steelblue;
+  }
+
+  .bar:hover{
+    fill: brown;
+  }
+
+  .axis {
+    font: 10px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  </style>
+</head>
+
+<body id="myPage2" data-spy="scroll" data-target="#sidebar" data-offset="0">
+
+<!--nav bar-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>                      
+      </button>
+      <h1><a class="navbar-brand" href="#myPage">Fidelity</a></h1>
+    </div>
+    <br><br><br>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="row">
+<!--side nav starts-->
+<div class="col-sm-3" id="sidebar" >
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sideNav">
+        <span class="icon-bar"></span>                      
+      </button>
+<div id="sideNav">
+<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
+    <li><a href="#loc">Home</a></li>
+    <li><a href="#doc">All Calls</a></li>
+    <li><a href="#sig">Statistics</a></li> 
+  </ul>
+  </div>
+</div>
+
+<!--Side nav ends-->
+
+ <div class="col-sm-9">
+
+  <!--Carousel Starts -->
+  <div id="top" class="carousel slide" data-ride="carousel">
+<img src="http://fintechist.com/wp-content/uploads/2016/06/Fidelity-Investmnets.png" width="100%">  
+ </div>
+
+  <!-- Carousel Ends -->
+ 
+
+
+<!--Location and Settings--> 
+<div class="row">
+<div class="col-sm-12">    
+<div id="about" class="bg-2">
+<div class="container2 text-center" id="loc">
+  <h3 id="head">HOME</h3>
+  <hr>
+  <p style="text-align: justify;">Fidelity Investments is a multinational financial services corporation based in Boston, Massachusetts.
+<br>
+Fidelity Investments operates a brokerage firm, manages a large family of mutual funds, provides fund distribution and investment advice, retirement services, wealth management, securities execution and clearance, and life insurance.
+
+  <br><br>
+  </p>
+  <p>
+  <i>With our project <b>EARDRUMS</b>, we process the calls out the relevant information out of them. We indentfy the nature of call, taxonomy of call and analysis for sentiment of emotions. This would help the customer care executive and reduce their efforts to produce the automted results.</i>
+  </p>
+
+  <br>
+  <div class="row">
+  <div class="col-sm-12">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!--End of Location and Settings-->
+
+<!--Start of Documentation-->
+<div class="row">
+<div class="col-sm-12">    
+<div id="about" class="bg-1" >
+<div class="container2 text-center" id="doc">
+<h3 id="head">ALL CALLS</h3>
+  <hr>
+
+<div id="">
+
+          <div id="dt">
+             <script type="text/javascript">
+function checkTime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+function startTime() {
+  var today = new Date();
+  var d= "Last Sync: " + today.getDate() + "/"
+                + (today.getMonth()+1)  + "/"
+                + today.getFullYear()
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('dt').innerHTML = d +" @ "+ h + ":" + m + ":" + s;
+}
+startTime();
+          </script>
+          <style>
+          #dt{
+            font-weight: bold;
+          }
+          </style>&nbsp;&nbsp;&nbsp;
+<br>
+	</div>
+
+  <br>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Call Record</th>
+        <th>Call Duration</th>
+        <th>Play</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% audios.forEach(function(equip){ %>
+          <tr>
+          <td>
+            <%= equip.voiceName %>
+          </td>
+          <td>
+            <%= equip.voiceDur %>
+          </td>
+          <td>
+            <audio controls>
+              <source src="audio/Record1.wav" type="audio/wav"/>
+            </audio>
+          </td>
+          <td>
+          <a href="/showdetail/<%= equip.voiceName %>"><button type="button" class="btn btn-default">View Details</button></a>
+          <% }); %>
+          </td>
+          </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
+</div>
+</div>
+</div>
+<!--End of Documentation-->
+
+
+<!--Start of Significance and Values-->
+<div class="row">
+<div class="col-sm-12">    
+<div id="about" class="bg-2">
+<div class="container2 text-center" id="sig">
+<h3 id="head">AGGREGATE STATISTICS</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      Total no. calls vs sentimental analysis
+      <iframe src="/graph1" height="320"></iframe>
+    </div>
+    <div class="col-md-6">
+      Total no. of calls vs taxonomy
+      <iframe src="/graph2" height="320"></iframe>
+    </div>
+  </div>
+  
+</div>
+</div>
+</div>
+</div>
+<!--End of Significance and Values-->
+
+
+
+<!-- Footer -->
+<div class="col-sm-12">
+<footer class="text-center" style="background-color: #222">
+  <div class="row text-center"><div class="col-sm-12">Fidelity</div></div>
+</footer>
+</div>
+
+</div>
+</body>
+</html>

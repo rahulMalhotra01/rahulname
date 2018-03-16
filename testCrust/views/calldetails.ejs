@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fidelity</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../stylesheets/design.css">
+  <link rel="stylesheet" href="../stylesheets/anime.css">
+</head>
+
+<body id="myPage2" data-spy="scroll" data-target="#sidebar" data-offset="0">
+
+<!--nav bar-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>                      
+      </button>
+      <h1><a class="navbar-brand" href="#myPage">Fidelity</a></h1>
+    </div>
+    <br><br><br>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    </div>
+  </div>
+</nav>
+
+
+<div class="container bg-2" id="#container3" style="padding-bottom: 10px;"><h3>Call Id : <%= audios.voiceName %></h3></div>
+<div class="container bg-1">
+<b>Call Duration : </b> <%= audios.voiceDur %><br>
+<b>Speech to Text : </b> <%= audios.emtext %><br>
+<br><br>
+Audio Taxonomy<br>
+<% if(audios.voiceName == "Record1"){ %>
+<iframe src="/detGraph1" height="320"></iframe>
+<% } else { %>
+<iframe src="/detGraph2" height="320"></iframe>
+<% } %>
+<br><br>
+<a href="/dashboard"><button type="button" class="btn btn-default">Go Back</button></a>
+</div>
+
+
+<!-- Footer -->
+<div class="col-sm-12">
+<footer class="text-center" style="background-color: #222">
+  <div class="row text-center"><div class="col-sm-12">Fidelity</div></div>
+</footer>
+</div>
+
+</div>
+</body>
+</html>
+
